@@ -10,10 +10,6 @@
     justify-content: center;
 
     color: #555555;
-    background-image: url('../../assets/images/bg-01.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .login-wrapper {
