@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url('./assets/fonts/montserrat/Montserrat-Medium.ttf');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Montserrat-Medium, sans-serif;
+}
