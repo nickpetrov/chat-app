@@ -1,7 +1,26 @@
-<header>
-  <div class="row p-3">
-    <div class="col-12">
-      <button class="btn btn-primary float-right" (click)="logout()">Logout</button>
+<header style="">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="container app-chat">
+  <main class="app-chat__main" role="main">
+    <div class="app-chat__main-messages">
+      <div class="message incoming">test message incoming</div>
+      <div class="message outgoig">test message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoing</div>
+      <div class="message incoming">test message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incoming</div>
+    </div>
+  </main>
+</div>
+<footer class="bg-dark app-footer">
+  <div class="container">
+    <div class="row">
+      <input tyle="text" class="app-footer__input">
+      <button class="btn btn-primary float-right app-footer__button" (click)="logout()">Logout</button>
     </div>
   </div>
-</header>
+</footer>

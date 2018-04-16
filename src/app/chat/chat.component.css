@@ -1,5 +1,53 @@
-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
+.app-chat {
+  height: 100%;
+  padding: 54px 0;
+}
+
+.app-chat__main {
+  height: 100%;
+  overflow: auto;
+}
+
+.app-chat__main-messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  min-height: 100%;
+}
+
+.message {
+  margin-bottom: 16px;
+  padding: 4px 8px;
+  background: #fff;
+  max-width: 80%;
+  border-radius: 8px 8px 8px 0;
+}
+
+.incoming {
+  align-self: flex-start;
+}
+
+.outgoig {
+  align-self: flex-end;
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  padding: 8px 0;
+}
+
+.app-footer__input {
+  flex-grow: 1;
+  padding: 0 8px;
+  margin-right: 16px;
+}
+
+.app-footer__button {
+  flex-grow: 0;
+  align-self: flex-start;
 }
