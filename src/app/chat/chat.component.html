@@ -8,19 +8,26 @@
   </nav>
 </header>
 <div class="container app-chat">
-  <main class="app-chat__main" role="main">
+  <main class="app-chat__main" role="main" #scrollMe>
     <div class="app-chat__main-messages">
-      <div class="message incoming">test message incoming</div>
+      <!-- <div class="message incoming">test message incoming</div>
       <div class="message outgoig">test message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoingtest message outgoing</div>
-      <div class="message incoming">test message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incoming</div>
+      <div class="message incoming">test message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incomingtest message incoming</div> -->
+      <div class="message" *ngFor="let message of messages | async" [ngClass]="{'incoming': message.email !== userEmail, 'outgoig': message.email === userEmail}">
+        <p>{{ message.email }} on {{ message.timestamp | date: 'short' }}</p>
+        <p>{{ message.message }}</p>
+        <p></p>
+      </div>
     </div>
   </main>
 </div>
 <footer class="bg-dark app-footer">
   <div class="container">
     <div class="row">
-      <input tyle="text" class="app-footer__input">
-      <button class="btn btn-primary float-right app-footer__button" (click)="logout()">Logout</button>
+      <form class="app-footer__form" #f="ngForm" (ngSubmit)="send()">
+        <input tyle="text" class="app-footer__input" name="message" [(ngModel)]="message">
+        <button class="btn btn-primary float-right app-footer__button" type="submit" [disabled]="!message">Send</button>
+      </form>
     </div>
   </div>
 </footer>

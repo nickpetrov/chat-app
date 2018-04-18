@@ -21,15 +21,16 @@
   padding: 4px 8px;
   background: #fff;
   max-width: 80%;
-  border-radius: 8px 8px 8px 0;
 }
 
 .incoming {
   align-self: flex-start;
+  border-radius: 8px 8px 8px 0;
 }
 
 .outgoig {
   align-self: flex-end;
+  border-radius: 8px 8px 0 8px;
 }
 
 .app-footer {
@@ -39,6 +40,11 @@
   right: 0;
   height: 54px;
   padding: 8px 0;
+}
+
+.app-footer__form {
+  flex-grow: 1;
+  display: flex;
 }
 
 .app-footer__input {
